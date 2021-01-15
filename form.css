@@ -2,9 +2,10 @@
 
 :root {
   --height-header: 60px;
-  --height-footer: 100px;
+  --height-footer: 90px;
   --color-primary: #21c4f8;
   --color-footer: #00adfd;
+  --height-wrapper: calc(100vh - var(--height-header) - var(--height-footer));
 }
 
 * {
@@ -12,7 +13,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-} 
+}
+
+.header {
+  width: 100%;
+}
 
 .header__menu {
     display: none;
@@ -30,24 +35,32 @@
   align-items: center;
 }
 
-.wrapper {
-  height: calc(100vh - var(--height-header) - var(--height-footer));
+.main {
+  height: calc(100vh - var(--height-footer));
+  min-height: 42em;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .form__wrapper {
   background-color: var(--color-primary);
-  border-radius: 30px;
-  width: 380px;
-  height: 480px;
-  margin-top: 2em;
+  border-radius: 1.5em;
+  width: 30em;
+  height: 35em;
+  padding-top: 0.5em;
 }
 
 .form__title {
-  margin: 1.5em 0 0.8em;
+  margin: 0.8em 0;
   color: white;
-  font-size: 1.8em;
+  font-size: 2.2em;
   text-align: center;
 }
 
@@ -59,12 +72,12 @@
 }
 
 .btn {
-  width: 280px;
-  height: 35px;
+  width: 18em;
+  height: 2.5em;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 0.6em;
   color: white;
-  font-size: 0.8em;
+  font-size: 1.1em;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -82,52 +95,54 @@
 }
 
 .icon__sign {
-  width: 25px;
-  height: 25px;
+  width: 1.6em;
+  height: 1.6em;
   background-color: white;
-  padding: 3px;
-  border-radius: 2px;
+  padding: 0.1em;
+  border-radius: 0.15em;
   position: absolute;
-  left: 10px;
+  left: 0.6em;
   text-align: center;
 }
 
 .form__text {
   color: white;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 .form p {
-  margin: 10px 0;
+  margin: 0.5em 0;
 }
 
 .form__input {
-  width: 280px;
-  height: 35px;
-  border-radius: 20px;
+  width: 23em;
+  height: 3em;
+  border-radius: 1.5em;
   outline: none;
   border: none;
   padding-left: 1em;
 }
 
 .btn-submit {
-  width: 280px;
-  height: 35px;
+  width: 18em;
+  height: 2.5em;
   border: none;
   outline: none;
-  border-radius: 20px;
+  border-radius: 1.5em;
   background-color: #f65875;
   color: white;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 1.5em;
   cursor: pointer;
+  font-size: 1.1em;
 }
 
 .form__links {
-  width: 250px;
-  font-size: 0.6em;
+  margin-top: 1em;
+  width: 24em;
+  font-size: 0.8em;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .links__top {
@@ -198,24 +213,60 @@
     font-weight: 100;
 }
 
-@media screen and (max-width: 1024px) {
-    :root {
-        --height-footer: 90px;
-    }
 
-    .wrapper {
-        align-content: flex-start;
-    }
+@media screen and (max-width: 768px) {
+  .wrapper {
+    align-items: center;
+  }
 
-    .form__wrapper {
-        transform: scale(0.9);
-        margin-top: -1em;
-    }
+  .footer__wrapper {
+    height: 25em;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer {
+    transform: translate(0,0);
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    margin-bottom: 3em;
+  }
+
+  .footer__links {
+    width: 100%;
+  }
+
+  .footer__ul {
+    justify-content: space-around;
+    font-size: 1em;
+    gap: 0;
+  }
+
+  .footer__redes {
+      width: 100%;
+      padding: 0 1em;
+      justify-content: space-around;
+  }
 }
 
 @media screen and (max-width: 426px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--color-primary);
+    }
+
     .header {
-        background-color: var(--color-primary);
         display: flex;
         align-items: center;
         color: white;
@@ -235,44 +286,12 @@
         padding: 0;
     }
 
-    .wrapper {
-        height: 100%;
-        background-color: var(--color-primary);
-    }
-
-    .form__wrapper {
-        transform: scale(1.3, 1.2);
-        margin-top: 6em;
-        margin-bottom: 8em;
-    }
-
-    .form {
-        gap: 1em;
-    }
-
     .footer__wrapper {
-        height: 380px;
-        background-color: white;
+      background: white;
     }
 
-    .footer__top {
-        flex-direction: column;
-        padding-top: 14em;
+    .footer {
+      color: black;
     }
-
-    .footer__title {
-        display: none;
-    }
-
-    .footer__links {
-        color: black;
-        font-size: 1.1em;
-        margin-bottom: 5em;
-        
-    }
-
-    .footer__ul {
-        gap: 2em;
-        font-weight: 400;
-    }
+    
 }
