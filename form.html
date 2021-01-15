@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,54 +16,70 @@
 
     <main class="wrapper">
         <section class="form__wrapper">
-            <h2>Bienvenido</h2>
+            <h2 class="form__title">Bienvenido</h2>
             <form class="form">
-                <p>
+                <a class="btn google">
+                    <figure class="icon__sign">
+                        <img  src="./img/google-sign-icon.jpg" width="20" alt="">
+                    </figure>
+                    
                     Ingresa con Google
-                </p>
-                <p>
+                </a>
+                <a class="btn facebook"> 
+                    <figure class="icon__sign">
+                        <img  src="./img/facebook-sign-icon.png" width="10px" alt="">
+                    </figure>
+                    
                     Ingresa con Facebook
-                </p>
-                O ingresa con tus datos de sesión:
-                <p>
-                    <input type="email" class="form__input">
-                </p>
-                <p>
-                    <input type="password" class="form__input">
-                </p>
-                <p>
-                    <button>Iniciar Sesión</button>
-                </p>
-                <p>
-                    <a href="">¿Aún no tienes una cuenta?</a>
-                    <a href=""><b>Regístrate aquí</b></a>
-                    <br>
-                    <a href=""><b>Olvidé mi contraseña</b></a>
-                </p>
+                </a>
+                    <p class="form__text">o ingresa con tus datos de sesión</p>
+            
+                    <input type="email" class="form__input" placeholder="Correo electrónico">
+                
+            
+                    <input type="password" class="form__input" placeholder="Contraseña">
+                
+            
+                    <button type="submit" class="btn-submit">Iniciar Sesión</button>
+                
+                    <div class="form__links">
+                        <div class="links__top">
+                            <a href="">¿Aún no tienes una cuenta?  </a>   
+                            <a href=""><b>Regístrate aquí</b></a>
+                        </div>
+                        <a href=""><b>Olvidé mi contraseña</b></a>
+                    </div>
+                    
+                
             </form>
         </section>
     </main>
 
-
-    <footer class="footer">
-        <div class="footer__wrapper">
-            <h4 class="footer__title">
-                Logo
-            </h4>
-            <div class="footer__links">
-                <ul>
-                    <li>Home</li>
-                    <li>Servicios</li>
-                    <li>Nosotros</li>
-                    <li>Contactanos</li>
-                </ul>
+    <footer class="footer__wrapper">
+        <div class="footer">
+            <div class="footer__top">
+                <h4 class="footer__title">
+                    Logo
+                </h4>
+                <div class="footer__links">
+                    <ul class="footer__ul">
+                        <li class="footer__li">Home</li>
+                        <li class="footer__li">Servicios</li>
+                        <li class="footer__li">Nosotros</li>
+                        <li class="footer__li">Contactanos</li>
+                    </ul>
+                </div>
+                <div class="footer__redes">
+                    <img src="./img/facebook-icon.webp" width="20" height="20" alt="">
+                    <img src="./img/instagram-icon.png" width="20" height="20" alt="">
+                    <img src="./img/youtube-icon.png" width="20" height="20" alt="">
+                </div>
             </div>
-            <div class="footer__redes">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <div class="footer__bottom">
+                <p>2021 Logo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+    
 </body>
 </html>
