@@ -418,6 +418,7 @@
     .cabecera_2{
         margin-right: 10px;
         gap: 8px;
+        justify-content: space-around;
     }
     .cabecera_btn{
         display: flex;
@@ -473,7 +474,7 @@
         display: block;
         font-size: 40px;
         color: #ffffff;
-        margin-right: 55px;
+        margin-right: 50px;
     }
     .columna_1{
         width: 75%;
@@ -521,6 +522,12 @@
 @media screen and (max-width: 560px){
     *{
         transition: .3s all ease-in-out;
+    }
+    .cabecera{
+       padding-top: 50px;
+    }
+    .section_1{
+        padding-top: 40px;
     }
     .info_servicios{
         flex-direction: column;
@@ -590,6 +597,7 @@
     .contacto_contenido iframe{
         width: 100%;
         border-radius: 0;
+       
     }
     .footer_logo{
         display: none;
@@ -601,6 +609,63 @@
     .footer_redes img {
         width: 40px;
         height: 40px;
+    }
+    /* ACTIVANDO EL NAV BAR */
+
+    .cabecera.open_bar{
+        flex-wrap: wrap;
+        padding-top: 30px;
+        height: fit-content;
+        gap: 20px;
+        background-color: #ffffff;
+    }
+    .cabecera.open_bar .logo{
+        margin-left: 40px;
+    }
+    .cabecera.open_bar .bar i{
+        margin-right: 0;
+        color: var(--color_principal);
+    }
+    .cabecera.open_bar .cabecera_2{
+        display: block;
+        order: 3;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+    .cabecera.open_bar button{
+        border-radius: 0;
+        width: 100%;
+    }
+    .cabecera.open_bar .btn1{
+        background-color: var(--color_principal);
+        color: #ffffff;
+    }
+    .cabecera.open_bar .navegador{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cabecera.open_bar .cabecera_lista{
+        width: 100%;
+    }
+    .cabecera.open_bar .cabecera_link{
+        color: var(--color_principal);
+    }
+    .cabecera.open_bar .cabecera_link:hover{
+        border-bottom: none;
+    }
+    .cabecera_lista:hover{
+        border: none;
+        border-bottom: 5px solid  var(--color_principal);
+    }
+    .cabecera.open_bar .cabecera_btn{
+        padding-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }
 
