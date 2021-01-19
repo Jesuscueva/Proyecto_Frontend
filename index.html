@@ -1,50 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Document</title>
   </head>
   <body>
       <!-- Cabecera -->
-    <header class="header">
-      <div class="img">
-          <h1>LOGO</h1>
-      </div>
-     <div class="navegacion">
-        <nav>
-            <ul class="header_list">
-              <li><a class="list_link" href="#">Home</a></li>
-              <li><a class="list_link" href="#">Servicios</a></li>
-              <li><a class="list_link" href="#">Contáctamos</a></li>
+
+      <header class="cabecera " id="cabecera">
+        <div class="logo ">
+          <img src="#" alt="LOGO DE LA EMPRESA">
+        </div>
+        <div class="cabecera_2 ">
+          <nav >
+            <ul class="navegador ">
+              <li class="cabecera_lista "><a href="#" class="cabecera_link">Home</a></li>
+              <li class="cabecera_lista "><a href="#" class="cabecera_link">Servicios</a></li>
+              <li class="cabecera_lista "><a href="#" class="cabecera_link">Contáctanos</a></li>
             </ul>
           </nav>
-          <div class="line"></div>
-          <div class="header_btn">
-              <button class="header_button1">Ingresar</button>
-              <button class="header_button2">Registrarse</button>
+          <div class="cabecera_btn">
+            <button class="btn1 open_bar">Ingresar</button>
+            <button class="btn2">Registrate</button>
           </div>
-     </div>
-    </header>
-    <!-- Primera sección de la pagina web -->
-    <main>
-        <div class="section1">
-            <div class="columna1"> 
-                <h3 class="info_subtitulo">Sed ut perspiciatis unde omnis iste natus sit</h3>
-                <p class="info_parrafo">Etd quasi architecto beatae vitae dicta sunt explicabo</p>
-                <div class="info_button">Reserva tu citas</div>
-            </div>
-            <div class="columna2">
-                <figure class="img__banner">
-                    <img src="./img/dog-photo.png" alt="">
-                </figure>
-            </div>
         </div>
-        
-    </main>
+        <div class="bar" id="menu">
+          <i class="fas fa-bars bar"></i>
+        </div>
+      </header>
+
+        <!-- MENÚ -->
+
+        <main>
+
+          <section class="section_1">
+            <article class="columna_1">
+              <div class="info">
+                <h2 class="info_subtitulo">
+                  Esta es la informacion principal de nuestra pagina web.
+                </h2>
+               <p class="info_parrafo">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere!
+               </p>
+               <button class="info_btn">
+                 Reserva tu Cita
+               </button>
+              </div>
+            </article>
+            <article class="columna_2">
+              <figure class="imagen">
+                <img src="./img/dog-photo.png" alt="Imagen principal">
+              </figure>
+            </article>
+          </section>
+
+
+
+
+          <!-- ////////////////////////////////////// -->
+
+
+          
+          <section class="section_2">
+            <article class="servicios">
+             <h2 class="servicio_subtitulo">
+               Servicios
+             </h2>
+             <div class="servicios_iconos">
+             <div class="contenedor_icono">
+              <div class="icono"><img src="./img/vacuna-logo.png" alt=""></div>
+              <p>Vacunación</p>
+             </div>
+              <div class="contenedor_icono">
+                <div class="icono"><img src="./img/ducha-logo.png" alt=""></div>
+                <p>Baño</p>
+              </div>
+              <div class="contenedor_icono">
+                <div class="icono"><img src="./img/dermatologia-logo.png" alt=""></div>
+                <p>Dermatología</p>
+              </div>
+              <div class="contenedor_icono">
+                <div class="icono"><img src="./img/peluqueria-logo.png" alt=""></div>
+                <p>Peluquería</p>
+              </div>
+              <div class="contenedor_icono">
+                <div class="icono"><img src="./img/odontologia-logo.png" alt=""></div>
+                <p>Odontología</p>
+              </div>
+             </div>
+            </article>
+
+            <article class="info_servicios">
+              <div class="img_info">
+                <img src="./img/cat-photo.png" alt="Imagen de servicios">
+              </div>
+              <div class="info_individual">
+                <h4 class="info_name">
+                  Especialidad
+                </h4>
+                <p class="info_parrafo2">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem esse assumenda corrupti quia, accusamus voluptatum ullam, debitis tempora aut sit beatae ipsum voluptate.
+                </p>
+                <button class="btn_services">
+                  Conoce más
+                </button>
+              </div>
+            </article>
+          </section>
+
+
+
+
+
+          <section class="section_3">
+            <article class="conocenos">
+              <h2>Nuestro equipo de veterinarios</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias reiciendis esse dolorem, consequuntur quaerat alias ipsum, maxime delectus excepturi, sint pariatur commodi. Sint, natus nostrum.</p>
+            </article>
+            <article class="veterinarios">
+              <div class="next"></div>
+              <div class="veterinario">
+                <figure class="veterinario_img">
+                  <img src="./img/vet1.png" alt="">
+                </figure>
+                <h4>Nombre vet 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad.
+                </p>
+              </div>
+              <div class="veterinario">
+                <figure class="veterinario_img">
+                  <img src="./img/vet2.png" alt="">
+                </figure>
+                <h4>Nombre vet 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad.
+                </p>
+              </div>
+              <div class="veterinario">
+                <figure class="veterinario_img">
+                  <img src="./img/vet3.png" alt="">
+                </figure>
+                <h4>Nombre vet 1</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad.
+                </p>
+              </div>
+              <div class="back"></div>
+            </article>
+          </section>
+
+
+          
+
+          <section class="section_4">
+
+            <article class="descripcion">
+              <h3>Testimonios</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio sint sequi, ipsa provident quos accusantium?</p>
+            </article>
+              <article class="testimonios">
+                <div class="card_testimonio ">
+                  <i class="fas fa-angle-left cambio"></i>
+                 <div class="">
+                  <img src="./img/testimonio1-photo.png" alt="Usuario con su testimonio">
+                  <h4>Testimonio #1</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur harum id suscipit aliquid maxime alias, aliquam nihil et voluptatem in.</p>
+                 </div>
+                  <i class="fas fa-angle-right cambio"></i>
+                </div>
+              </article>
+          </section>
+
+
+          <section class="section_5">
+
+            <div class="titulo">
+              <h2>Contáctanos</h2>
+            </div>
+
+            <div class="opcion_contacto">
+              <div class="opcion">
+                <i class="fas fa-map-marked-alt"></i>
+                Dirección
+              </div>
+              <div class="opcion">
+                <i class="fas fa-calendar-alt"></i>
+                Horarios
+              </div>
+              <div class="opcion">
+                <i class="fas fa-phone-alt"></i>
+                Teléfono
+              </div>
+              <div class="opcion">
+                <i class="fas fa-envelope"></i>
+                Mail
+              </div>
+            </div>
+
+            <div class="contacto_contenido">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.963915352049!2d-77.032734486184!3d-12.046003791467774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d5aa7eb1%3A0x16061e0b481e22aa!2sPlaza%20de%20Armas%20de%20Lima!5e0!3m2!1ses-419!2spe!4v1610777726331!5m2!1ses-419!2spe" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+              <div class="footer">
+                <div class="footer_logo">
+                  <img src="#" alt="Logo parte inferior">
+                </div>
+                <div class="footer_nav">
+                  <ul class="footer_list">
+                    <li class="footer_link">Home</li>
+                    <li class="footer_link">Servicios</li>
+                    <li class="footer_link">Nosotros</li>
+                    <li class="footer_link">Contáctanos</li>
+                  </ul>
+                </div>
+                <div class="footer_redes">
+                  <img src="./img/facebook-icon.webp" alt="Logo de facebook">
+                  <img src="./img/instagram-icon.png" alt="Logo de instagram">
+                  <img src="./img/youtube-icon.png" alt="Logo de youtube">
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+
+
 
     <script src="index.js"></script>
   </body>
