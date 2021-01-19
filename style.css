@@ -66,12 +66,22 @@
     border-bottom: 2px solid #ffffff ;
 }
 
-.cabecera_btn button {
+.cabecera_btn {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.cabecera_btn a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
     width: 135px;
+    padding: 0.3em 1em;
     font-weight: 700;
     border-radius: 15px;
 }
-.cabecera_btn button:hover {
+.cabecera_btn a:hover {
     transition: all 0.2s ease-in;
     transform: scale(1.1);
 }
