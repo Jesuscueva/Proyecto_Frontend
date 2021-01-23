@@ -1,5 +1,6 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Route, Redirect } from "react-router-dom";
+import AdminRouter from './modules/admin/AdminRouter';
 import PosRouter from "./modules/pos/PosRouter";
 
 const App = () => {
@@ -7,7 +8,8 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/pos" component={PosRouter} />
-        {/* <Route path="/" component={} /> */}
+        <Route path="/admin" component={AdminRouter} />
+        <Redirect to="/pos/home"/>
       </Switch>
     </BrowserRouter>
   );
