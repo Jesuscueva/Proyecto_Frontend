@@ -99,7 +99,7 @@
     background-size: cover;
     background-position: 25% 100%;
     padding: 0px 110px;
-    height: 500px;
+    height: 515px;
 }
 .columna_1 {
     width: 50%;
@@ -558,6 +558,10 @@
         margin-right: 0;
         color: var(--color_principal);
     }
+    .cabecera.open_bar .navegador {
+        background-color: #ffffff;
+        height: 125px;
+        }
     .cabecera.open_bar .cabecera_2{
         display: block;
         order: 3;
@@ -695,3 +699,20 @@
  
 }
 
+@media screen and (max-width: 422px){
+    .section_1{
+        background-color: #ffffff;
+    }
+    .section_2{
+        background-color: #ffffff;
+    }
+    .section_3{
+        background-color: #ffffff !important;
+    }
+    .section_4{
+        background-color: #ffffff;
+    }
+    .section_5{
+        background-color: #ffffff;
+    }
+}
