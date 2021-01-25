@@ -18,7 +18,7 @@ const PosHeader = () => {
         </div>
         <div className="cabecera_2 ">
           <nav >
-            <ul className="navegador">
+            <ul className="navegador_1">
               <li className="cabecera_lista "><a href="#" className="cabecera_link">Home</a></li>
               <li className="cabecera_lista "><a href="#" className="cabecera_link">Servicios</a></li>
               <li className="cabecera_lista "><a href="#" className="cabecera_link">Contáctanos</a></li>
