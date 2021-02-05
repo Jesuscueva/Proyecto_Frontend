@@ -9,6 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 :root {
     --color_principal: #00ADFD;
     --color_secundario: rgba(246, 88, 117, 0.66);
@@ -57,10 +58,14 @@
 .cabecera_lista {
     list-style: none;
 }
-
-.cabecera_link {
+.cabecera_link{
     color: #ffffff;
+    text-decoration: none;
     font-weight: 700;
+}
+.cabecera_link:hover {
+    color: #ffffff;
+    transform: scale(1.1);
     text-decoration: none;
 }
 

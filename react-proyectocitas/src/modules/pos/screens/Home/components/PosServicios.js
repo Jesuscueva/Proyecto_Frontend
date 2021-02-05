@@ -15,7 +15,6 @@ const PosServicios = () => {
 
   useEffect(()=>{
     getServicios().then((data)=>{
-      console.log(data)
       setServicios(data)
     })
   },[])

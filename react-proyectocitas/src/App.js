@@ -3,6 +3,7 @@ import { Switch, BrowserRouter, Route, Redirect } from "react-router-dom";
 import AdminRouter from './modules/admin/AdminRouter';
 import PosRouter from "./modules/pos/PosRouter";
 
+
 const App = () => {
   return (
     <BrowserRouter>

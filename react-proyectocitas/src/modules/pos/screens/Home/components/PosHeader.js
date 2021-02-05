@@ -25,8 +25,8 @@ const PosHeader = () => {
             </ul>
           </nav>
           <div className="cabecera_btn">
-            <button className="btn1 open_bar"><Link to="/pos/login">Ingresar</Link></button>
-            <button className="btn2">Registrate</button>
+            <button className="btn1 open_bar"><Link className="link" to="/pos/login">Ingresar</Link></button>
+            <button className="btn2"><Link className="link" to="/pos/register">Registrate</Link></button>
           </div>
         </div>
         <div className="bar" id="menu">

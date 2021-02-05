@@ -1,11 +1,18 @@
 import React from 'react'
-import PosLogin from './components/PosLogin'
+import LoginFooter from './components/LoginFooter'
+import LoginForm from './components/LoginForm'
+import LoginHeader from './components/LoginHeader'
+
 
 const PosLoginPincipalScreen = () => {
     return (
-        <div>
-            <PosLogin />
-        </div>
+        <>
+            <main className="main">
+            <LoginHeader />
+            <LoginForm />
+            </main>
+            <LoginFooter />
+        </>
     )
 }
 
