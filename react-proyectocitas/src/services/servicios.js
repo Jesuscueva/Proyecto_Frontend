@@ -1,5 +1,6 @@
 import { URL_BACKEND2 } from "../environments/environments"
 const URL_BACKEND = "https://600c6acbf979dd001745bf5b.mockapi.io"
+const URL_BACKEND3 = "https://6018d613971d850017a404d4.mockapi.io/";
 
 
 
@@ -67,5 +68,13 @@ export const putUsuario = async (objUsuario) => {
     });
     const data = await peticion.json();
     return data;
+}
+
+///SERVICIOS DE GIANCARLOS
+
+export const getDatosConsultorio = async () => {
+    const peticion = await fetch(`${URL_BACKEND3}/Consultorio`);
+    const data = await peticion.json();
+    return data; 
 }
 

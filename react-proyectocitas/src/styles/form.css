@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  --height-header: 60px;
+  --height-header: 120px;
   --height-footer: 90px;
   --color-primary: #21c4f8;
   --color-footer: #00adfd;
   --height-wrapper: calc(100vh - var(--height-header) - var(--height-footer));
 }
+
 
 * {
   margin: 0;
@@ -27,7 +28,7 @@
 
 .header {
   width: 100%;
-  height: 75px;
+  height: 105px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,15 +58,20 @@
 }
 
 .header__logo {
-  max-width: 1440px;
+  width: 120px;
   height: var(--height-header);
-  color: black;
   font-size: 1.2em;
   font-weight: 700;
   padding-left: 1em;
   display: flex;
   align-items: center;
+  border-radius: 20px;
 }
+
+.header__logo img {
+  width: 100%;
+}
+
 
 .form__wrapper {
   background-color: var(--color-primary);

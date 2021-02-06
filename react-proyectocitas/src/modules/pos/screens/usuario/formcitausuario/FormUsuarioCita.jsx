@@ -3,6 +3,7 @@ import moment from "moment"
 
 import ModalCitaForm from './ModalCitaForm'
 import PosContext from '../../../../../context/pos/posContext'
+import { Link } from 'react-router-dom'
 
 
 
@@ -79,7 +80,7 @@ const agendar = () =>{
         <>
         <div className="seleccion_cita">
         <div className="titulo_calendario">
-            <h3>Selecciona el día de tu cita:</h3>
+            <h3>Selecciona el día de tu cita:</h3> <Link to="/pos/usuario" className="regresar"> <i class="fa fa-table" aria-hidden="true"></i> Tablero</Link>
         </div>
         <div className="cabecera_calendario">
             <div className="anterior_mes" onClick={

@@ -44,6 +44,22 @@ $color-primary: #00ADFC;
     .sidebar_navegacion{
         height: calc(82vh - 110px);
         padding-left: 15px;
+        .sidebar_lista1{
+            background-color: #0063FF;
+            border-radius: 20px 0px 0px 20px;
+            list-style: none;
+            margin-top: 1.4em;
+            padding: 4px;
+            transition: .5s all ease-in-out;
+            .lista_link1{
+                padding: 1em;
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 1.2em ;
+           
+            }
+        }
         .sidebar_lista {
             list-style: none;
             margin-top: 1.4em;
@@ -58,13 +74,13 @@ $color-primary: #00ADFC;
             font-size: 1.2em 
             }
         }
-        .sidebar_lista a{
+        
+        .sidebar_lista .lista_link{
             padding: 1em;
             text-decoration: none;
             color: #ffffff;
             font-weight: 400;
             font-size: 1.2em ;
-       
         }
         
         .sidebar_lista a>i{
@@ -76,7 +92,11 @@ $color-primary: #00ADFC;
             border-radius: 25px 0px 0px 25px;
             background-color: #0063FF;
             padding-right: 0px;
+            & .sidebar_lista1{
+                background-color: transparent;
+            }
         }
+
     }
     hr {
         border: 1px solid  #eeeeee; 
@@ -110,7 +130,8 @@ $color-primary: #00ADFC;
 //ESTILOS DE POSINFOSCREEN
 
 .article-izq{
-    min-width: 180px;
+    width: 180px;
+    background-color: violet;
     height: 100vh;
     border-left: 2px solid $color-primary;
     text-align: center;
@@ -142,6 +163,7 @@ $color-primary: #00ADFC;
 
 .contenedor_promociones{
     overflow-y: scroll;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -245,12 +267,30 @@ $color-primary: #00ADFC;
      .titulo_calendario{
         margin-top: 10px;
        width: 90%;
+       display: flex;
+       overflow: hidden;
+       justify-content: space-between;
        border-radius: 25px;
         background-color: #ffffff;
         h3{
         font-size: 1.5rem;
         padding: 5px;
         font-weight: 700;
+        }
+        .regresar {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            text-decoration: none;
+            width: 140px;
+            color: #ffffff;
+            font-size: 700;
+            background-color: #F65875;
+            i{
+                margin-right: 5px;
+            }
         }
     }
 
@@ -350,6 +390,11 @@ $color-primary: #00ADFC;
     align-items: center;
     justify-content: center;
 }
+//  @media screen and (max-width: 1300px){
+//     .contenedor_usuario{
+//         min-width: 1340px;
+//     }
+//  }
 
 
  @media screen and (max-width: 1000px){

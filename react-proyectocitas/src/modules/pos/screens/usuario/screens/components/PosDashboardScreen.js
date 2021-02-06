@@ -25,26 +25,13 @@ const PosDashboardScreen = () => {
         {
             promo_img: "https://picsum.photos/200/218",
         },
-        {
-            promo_img: "https://picsum.photos/200/210",
-        },
-        {
-            promo_img: "https://picsum.photos/200/210",
-        },
-        {
-            promo_img: "https://picsum.photos/200/210",
-        },
-        {
-            promo_img: "https://picsum.photos/200/210",
-        },
-        {
-            promo_img: "https://picsum.photos/200/210",
-        },
+
     ]
 
 
     useEffect(()=>{
         getCitasRegistradas().then((data)=>{
+            console.log(data)
             setCitas(data)
         })
     },[])

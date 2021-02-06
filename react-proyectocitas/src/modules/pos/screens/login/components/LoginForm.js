@@ -1,61 +1,61 @@
-import React, { useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logoFacebook from "../../../../../assets/img/facebook-sign-icon.png";
 import logoGoogle from "../../../../../assets/img/google-sign-icon.jpg";
-import { Link, NavLink, useHistory } from 'react-router-dom'
+import { Link, NavLink, useHistory } from "react-router-dom";
 import { getUsuarios } from "../../../../../services/servicios";
 import PosContext from "../../../../../context/pos/posContext";
 
-
 const formularioVacio = {
-    email: "",
-    password: "",
-}
+  email: "",
+  password: "",
+};
 
 const LoginForm = () => {
+  const {
+    setAutenticando,
+    guardarTokenSesion,
+    setNombreUsuario,
+    setApellido,
+  } = useContext(PosContext);
 
-  const {setAutenticando, guardarTokenSesion, setNombreUsuario, setApellido } = useContext(PosContext)
+  const history = useHistory();
 
-  const history = useHistory()
+  const [formulario, setFormulario] = useState({ ...formularioVacio });
 
-  const [formulario, setFormulario] = useState({...formularioVacio})
-  
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormulario({
-      ...formulario, 
-      [e.target.name]: e.target.value
-    })
-  }
-  
+      ...formulario,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const submit = (e) => {
     e.preventDefault();
-    
+
     //Consumir servicio
-    
-    getUsuarios().then(data => {
-      data.map(user=>{
-        if (user.email === formulario.email && user.password === formulario.password) {
+
+    getUsuarios().then((data) => {
+      data.map((user) => {
+        if (
+          user.email === formulario.email &&
+          user.password === formulario.password
+        ) {
           console.log("Usuario verificado");
           setFormulario(formularioVacio);
-          setAutenticando(true)
-          guardarTokenSesion(user.token)
-          setNombreUsuario(user.name)
-          setApellido(user.lastname)
-          history.push("/pos/usuario")
-                    }
-                })
-            })
-
-    }
-
-
-  
-
+          setAutenticando(true);
+          guardarTokenSesion(user.token);
+          setNombreUsuario(user.name);
+          setApellido(user.lastname);
+          history.push("/pos/usuario");
+        }
+      });
+    });
+  };
 
   return (
     <>
       <section className="form__wrapper">
         <h2 className="form__title">Bienvenido</h2>
-
 
         <form className="form" onSubmit={submit}>
           <a className="btn-style google">
@@ -76,7 +76,8 @@ const LoginForm = () => {
           <input
             name="email"
             value={formulario.email}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
             type="email"
             className="form__input"
             placeholder="Correo electrónico"
@@ -84,28 +85,34 @@ const LoginForm = () => {
           <input
             name="password"
             value={formulario.password}
-            onChange={handleChange} required
+            onChange={handleChange}
+            required
             type="password"
             className="form__input"
             placeholder="Contraseña"
           />
 
           <button type="submit" className="boton_formulario">
-            Iniciar Sesión
+            Iniciar sesión
           </button>
 
           <div className="form__links">
             <div className="links__top">
               <p>¿Aún no tienes una cuenta? </p>
-              <Link className="nav-link h6" activeClassName="active" exact to="/pos/register">Registrate aquí</Link>
+              <Link
+                className="nav-link h6"
+                activeClassName="active"
+                exact
+                to="/pos/register"
+              >
+                Registrate aquí
+              </Link>
             </div>
             <a href="">
               <b>Olvidé mi contraseña</b>
             </a>
           </div>
         </form>
-
-
       </section>
     </>
   );

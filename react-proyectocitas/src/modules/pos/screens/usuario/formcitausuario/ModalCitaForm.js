@@ -4,7 +4,7 @@ import { Button, Col, Form, FormGroup, Input, Label, Modal, ModalBody,
 } from "reactstrap";
 import PosContext from "../../../../../context/pos/posContext";
 import { getHoras, getServicios, posCitasRegistradas} from "../../../../../services/servicios";
-
+import Swal from "sweetalert2";
 
 
 
@@ -52,6 +52,11 @@ const ModalCitaForm = () => {
       console.log(data)
       setFormulario(formVacio)
       setModalCita(false)
+      Swal.fire(
+        'Tu cita se registro correctamente',
+        'Revisa tu tablero',
+        'success'
+      )
     })
   }
 
@@ -98,6 +103,7 @@ const ModalCitaForm = () => {
                 <Input type="select" name="hora_selec"  value={formulario.hora_selec}
                   onChange={handleChange}
                  id="hora_selec" >
+                   <option selected="true" >--Selecciona tu Horario--</option>
                    {
                      horas.map((hora)=>{
                         return <option key={hora.id}>{hora.hora_init}:00  a {hora.hora_fini}:00 </option>
@@ -110,7 +116,7 @@ const ModalCitaForm = () => {
               <FormGroup>
                 <Label for="service_select">📌 Seleccione Servicio:</Label>
                 <Input type="select"  name="service_selec" id="service_selec" onChange={handleChange} value={formulario.service_selec}>
-
+                   <option selected="true" >--Seleccione Servicio--</option>
                   {
                     servicios.map((servicio)=>{
                      return <option key={servicio.id}>{servicio.nombre_servicio}</option>

@@ -21,6 +21,7 @@
     padding: 5px;
     border: none;
     outline: none;
+    overflow: hidden;
     cursor: pointer;
  }
 
@@ -38,7 +39,12 @@
     justify-content: space-between;
 }
 .logo {
-    margin-left: 65px;
+    margin-left: 95px;
+    width: 110px;
+}
+.logo img{
+    width: 100%;
+    /* height: 90%; */
 }
 
 .cabecera_2{    
@@ -84,14 +90,24 @@
     transform: scale(1.1);
 }
 .btn1 {
-    color: #ffffff;
     background-color: var(--color_principal);
     background-color: transparent;
+    overflow: hidden;
+}
+.btn1 .link1{
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
 }
 
 .btn2 {
     background-color: #ffffff;
     color: var(--color_principal);
+}
+.btn2 .link2{
+    color: var(--color_principal);
+    text-decoration: none;
+    list-style: none;
 }
 .bar{
     display: none;
@@ -109,7 +125,7 @@
     height: 700px;
 }
 .columna_1 {
-    width: 50%;
+    width: 55%;
     padding: 25px;
 }
 
@@ -123,14 +139,25 @@
     color: #ffffff;
     margin-bottom: 25px;
 }
+
 .info_btn {
     border-radius: 25px;
+    padding: 12px;
+    outline: none;
     background-color: #ffffff;
-    color: var(--color_principal);
     font-size: 16px;
-    width: 160px;
+    width: 180px;
     margin-top: 15px;
     font-weight: 700;
+    overflow: hidden;
+}
+.info_btn .link3 {
+    color: var(--color_principal);
+    text-decoration: none;
+    list-style: none;
+}
+.info_btn:hover {
+    transform: scale(1.2);
 }
 
 .columna_2{
@@ -143,6 +170,7 @@
 
 .section_2 {
     max-width: 100%;
+
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -303,7 +331,10 @@ input[id="5"]:checked ~ .info_servicios{
 
 .section_3 {
     margin-top: 80px;
+    padding-top: 90px;
+    /* height: 700px; */
     width: 100%;
+    margin-top: 170px;
     text-align: center;
     margin-bottom: 45px;
 }
@@ -326,18 +357,21 @@ input[id="5"]:checked ~ .info_servicios{
     flex-wrap: wrap;
 }
 .veterinario {
+    border-radius: 17px;
+    box-shadow: rgba(0, 173, 253, 0.58) 2px 3px 6px;
     text-align: center;
-    width: 250px;
+    width: 300px;
 }
 .veterinario_img {
     height: 100px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
 }
 .veterinario_img img {
     width: 40%;
 }
 .veterinario h4 {
-    margin-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 15px;
     font-weight: 700;
     font-size: 18px;
 }
@@ -404,7 +438,7 @@ input[id="5"]:checked ~ .info_servicios{
     transition: all 0.3s ease-in-out;
 }
 .opcion:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     transform: scale(1.1);
 }
 .opcion i{ 
@@ -442,6 +476,11 @@ input[id="5"]:checked ~ .info_servicios{
     list-style: none;
     gap: 85px;
 }
+.footer_link a {
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .footer_link {
     text-decoration: none;
@@ -469,6 +508,10 @@ input[id="5"]:checked ~ .info_servicios{
     transform: scale(1.1);
 }
 
+.footer_contain .footer_logo img {
+    width: 110px;
+
+}
 
 @media screen and (max-width: 1100px){
     *{

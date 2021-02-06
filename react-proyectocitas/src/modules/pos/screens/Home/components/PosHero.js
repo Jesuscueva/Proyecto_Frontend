@@ -1,18 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import dog from '../../../../../assets/img/dog-photo.png'
 const PosHero = () => {
     return (
         <section className="section_1">
             <article className="columna_1">
               <div className="info">
-                <h2 className="info_subtitulo">
-                  Esta es la informacion principal de nuestra pagina web.
-                </h2>
+                <h1 className="info_subtitulo">
+                   Cuidamos a tu compañero de travesuras
+                </h1>
                <p className="info_parrafo">
-                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, facere!
+                  Servicios especializados de cuidado para tu mascota.
                </p>
                <button className="info_btn">
-                 Reserva tu Cita
+                 <Link className="link3" to="/pos/login" >Reserva tu Cita</Link>
                </button>
               </div>
             </article>

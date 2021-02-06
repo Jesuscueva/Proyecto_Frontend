@@ -10,7 +10,7 @@ const PosPrincipalUsuarioScreens = () => {
             <main className="contenedor_usuario">
             <PosSliderScreen />
             <PosDashboardScreen />
-            <PosInfoScreen />
+            {/* <PosInfoScreen /> */}
             </main>
         </>
     )

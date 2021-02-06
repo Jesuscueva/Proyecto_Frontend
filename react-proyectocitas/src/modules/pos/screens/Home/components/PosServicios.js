@@ -19,7 +19,7 @@ const PosServicios = () => {
     })
   },[])
         return (
-          <section className="section_2">
+          <section className="section_2" id="servicio">
 
           <input type="radio" id="1" name="image-slide" hidden/>
           <input type="radio" id="2" name="image-slide" hidden/>

@@ -25,15 +25,10 @@ const PosSliderScreen = () => {
         </div>
         <hr />
         <ul className="sidebar_navegacion">
-          <li className="sidebar_lista">
-            <a href="#">
-              <i className="far fa-user"></i>Mi Tablero
-            </a>
-          </li>
-          <li className="sidebar_lista">
-            <a href="#">
-              <i className="fas fa-table"></i>Mi Cuenta
-            </a>
+          <li className="sidebar_lista1">
+            <Link className="lista_link1" >
+            <i className="fas fa-table"></i>Tablero
+            </Link>
           </li>
           <li className="sidebar_lista">
             <Link className="lista_link" to="/pos/usuario/cita">
