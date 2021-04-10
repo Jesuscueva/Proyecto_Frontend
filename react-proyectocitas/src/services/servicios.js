@@ -69,6 +69,12 @@ export const putUsuario = async (objUsuario) => {
     const data = await peticion.json();
     return data;
 }
+ 
+export const getTestimonios = async ()=> {
+     const peticion = await fetch(`${URL_BACKEND2}/comentarios`);
+     const data = await peticion.json()
+     return data
+ }
 
 ///SERVICIOS DE GIANCARLOS
 

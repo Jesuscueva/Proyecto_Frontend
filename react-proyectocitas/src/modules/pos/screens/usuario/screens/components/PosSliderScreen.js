@@ -37,7 +37,7 @@ const PosSliderScreen = () => {
           </li>
         </ul>
         <div className="btn_slider">
-          <Link >
+          <Link to="/pos/home" >
           <button className="sidebar_btn">
             <i class="fas fa-sign-out-alt"></i>Salir
           </button>
