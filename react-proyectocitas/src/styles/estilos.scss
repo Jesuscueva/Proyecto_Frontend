@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+$color-primary: #00ADFC;
+
+.contenedor_usuario{
+    display: flex;
+    max-width: 1440px;
+}
+
+
+//ESTILOS SIDEBAR CSS
+*{
+    font-family: 'Roboto', sans-serif;
+    transition: all .5s  ease-in-out;
+}
+
+.sidebar {
+    
+    background-color: $color-primary;
+    height: 100vh;
+    min-width: 230px;
+    transition: all .5s;
+    .logo_empresa{
+        display: none;
+    }
+    .sidebar_bar{
+        display: none;
+    }
+    .sidebar_nom {
+        color: #ffffff;
+        height: 110px;
+        padding-top: 1.7em;
+        display: flex;
+        padding-left: 2.5em;
+    }
+    .sidebar_nom h2 {
+        padding-left: 10px;
+        font-weight: 300;
+    }
+    .sidebar_nom strong {
+        font-size: 1.7rem;
+        font-weight: 400;
+    }
+
+    .sidebar_navegacion{
+        height: calc(82vh - 110px);
+        padding-left: 15px;
+        .sidebar_lista1{
+            background-color: #0063FF;
+            border-radius: 20px 0px 0px 20px;
+            list-style: none;
+            margin-top: 1.4em;
+            padding: 4px;
+            transition: .5s all ease-in-out;
+            .lista_link1{
+                padding: 1em;
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 1.2em ;
+           
+            }
+        }
+        .sidebar_lista {
+            list-style: none;
+            margin-top: 1.4em;
+            padding: 4px;
+            margin-right: 5px;
+            transition: .5s all ease-in-out;
+            .lista_link{
+                padding: 1em;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 1.2em 
+            }
+        }
+        
+        .sidebar_lista .lista_link{
+            padding: 1em;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 1.2em ;
+        }
+        
+        .sidebar_lista a>i{
+            margin-right: 8px;
+        }
+        .sidebar_lista:hover {
+            padding-left: 1.6em;
+            margin-right: 0px;
+            border-radius: 25px 0px 0px 25px;
+            background-color: #0063FF;
+            padding-right: 0px;
+            & .sidebar_lista1{
+                background-color: transparent;
+            }
+        }
+
+    }
+    hr {
+        border: 1px solid  #eeeeee; 
+        width: 150px;
+    }
+    .btn_slider{
+        width: 100%;
+        background-color: $color-primary;
+    }
+    .sidebar_btn {
+        width: 80%;
+        padding: 4px;
+        border: none;
+        outline: none;
+        background-color: $color-primary;
+        color: #ffffff;
+        text-align: left;
+        padding-left: 4em;
+        transition: all .5s ;
+    }
+    .sidebar_btn:hover {
+        transform: scale(1.1);
+    }
+    .sidebar_btn i {
+        color: red;
+        font-size: 1.5em;
+        margin-right: 15px;
+    }
+}
+
+//ESTILOS DE POSINFOSCREEN
+
+.article-izq{
+    width: 180px;
+    background-color: violet;
+    height: 100vh;
+    border-left: 2px solid $color-primary;
+    text-align: center;
+    .article_logo {
+        padding-top: 2em;
+    }
+    .article_datos{
+        padding-top: 2em;
+        .article_lista{
+            list-style: none;
+            .lista_dato{
+                text-align: left;
+                font-size: 14px;
+                padding-left: 10px;
+                margin-top: 15px;
+                font-weight: 400;
+                i {
+                    color: $color-primary;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+//ESTILOS DE POS DASHBOARDSCREEN
+/// ESTILOS DEL MENU DASHBOARD
+
+.contenedor_promociones{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(196, 196, 196, 0.15);
+
+    .contenedor__promos{
+
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 15px;
+        width: 90%;
+        min-height: 240px;
+        gap: 15px;
+        // background-color: violet;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        
+        img {
+            border-radius: 20px;
+            cursor: pointer;
+        }
+     }
+}
+
+.title_promo {
+    margin-top: 25px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    i {
+        font-size: 1.7rem;
+        transition: all .4s;
+    }
+    i:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+   
+}
+
+ .titulo_tabla{
+     width: 90%;
+     text-align: left;
+     background-color: #ffffff;
+     border-radius: 20px;
+     padding: 15px;
+ }
+
+ //Estilos para tabla
+ .tabla_citas {
+     margin-bottom: 45px;
+     border-radius: 20px;
+     text-align: center;
+     min-width: 90%;
+     overflow: hidden;
+     background: transparent;
+    // background: rgba(196, 196, 196, 0.15);
+
+     .tabla_header{
+         color:#8F8F8F ;
+         font-size: 20px;
+         font-weight: 300;
+         background-color: #ffffff;
+         .tabla_secciones > th{
+            padding: 15px;
+        }
+     }
+     .tabla_body {
+         background-color: #ffffff;
+         .tabla_secciones > th {
+             padding: 18px;
+         }
+     }
+     
+ }
+
+
+ //ESTILOS DEL CALENDARIO
+
+ body{
+    background: rgba(196, 196, 196, 0.15);
+ }
+
+
+ .seleccion_cita {
+     max-width: 1440px;
+    //  height: 100vh;
+     gap: 15px;
+     display: flex ;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     .titulo_calendario{
+        margin-top: 10px;
+       width: 90%;
+       display: flex;
+       overflow: hidden;
+       justify-content: space-between;
+       border-radius: 25px;
+        background-color: #ffffff;
+        h3{
+        font-size: 1.5rem;
+        padding: 5px;
+        font-weight: 700;
+        }
+        .regresar {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            text-decoration: none;
+            width: 140px;
+            color: #ffffff;
+            font-size: 700;
+            background-color: #F65875;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .cabecera_calendario {
+        display: flex;
+        width: 90%;
+        height: 50px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 6px;
+        .anterior_mes {
+            font-size: 2em;
+            cursor: pointer;
+            transition: all .3s ;
+        }
+        .anterior_mes:hover{
+            color: $color-primary;
+            transform: scale(1.2);
+        }
+        .mes_año{
+            font-size: 2em;
+            font-weight: 700;
+        }
+        .siguiente_mes{
+            font-size: 2em;
+            transition: all .3s;
+            cursor: pointer;
+        }
+        .siguiente_mes:hover {
+            color: $color-primary;
+            transform: scale(1.2);
+        }
+    }
+
+    .calendario{
+        //  padding: 10px;
+         width: 90%;
+         height: 465px;
+         //  border: 1px solid  #0063FF;
+         border-radius: 25px 25px 37px 37px;
+         overflow: hidden;
+         .nombre_dias{
+             background-color: $color-primary;
+             min-width: 100%;
+             border-bottom: 4px solid rgba(196, 196, 196, 0.15);
+             .nom_dia{
+                 position: relative;
+                 font-size: 1.3rem;
+                 width: calc(100% / 7);
+                 height: 40px;
+                 font-weight: 700;
+                 display: inline-block;
+                 text-align: center;
+                 padding: 17px;
+                }
+            }
+            .day {
+             background-color: #ffffff;
+             position: relative;
+             font-size: 1.5rem;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-weight: 700;
+             width: calc(100% / 7);
+             height: 70px;
+             display: inline-block;
+             text-align: center;
+             padding: 14px;
+             border: 4px solid rgba(196, 196, 196, 0.15);
+         }
+         .day:hover{
+                  cursor: pointer;
+                  p{
+                      transition: all .4s ease-in;
+                      color: $color-primary;
+                      cursor: pointer;
+                      transform: scale(1.3);
+                  }
+               }
+     }
+    
+    
+ }
+ 
+
+ //ESTILOS DEL MODAL
+ 
+ .modal__cita{
+     box-shadow: 5px 6px 12px black;
+}
+.titulo_modal{
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//  @media screen and (max-width: 1300px){
+//     .contenedor_usuario{
+//         min-width: 1340px;
+//     }
+//  }
+
+
+ @media screen and (max-width: 1000px){
+     .article-izq{
+         transition: all 1s ease-out;
+         display: none;
+     }
+     .sidebar {
+         width: 200px;
+     }
+ }
+
+ @media screen and (max-width: 870px){
+
+    .contenedor_usuario{
+        height: 100vh;
+        overflow-y: hidden;
+    }
+     .sidebar{
+         display: none;
+     }
+     .contenedor_usuario{
+         flex-direction: column;
+     }
+     .sidebar{
+         display: flex;
+         width: 100%;
+         height:  70px;
+         align-items: center;
+         justify-content: space-between;
+         padding: 12px;
+         > *{
+             display: none;
+         }
+         .sidebar_nom{
+             display: none;
+         }
+         .logo_empresa{
+             display: block;
+         }
+         .logo_empresa{
+             margin-left: 25px;
+         }
+         .sidebar_bar{
+             display: block;
+             color: #ffffff;
+             margin-right: 25px;
+             cursor: pointer;
+             i{
+                font-size: 40px;
+             }
+         }
+         
+     }
+
+     .sidebar.activado{
+         padding-top: 28px;
+         align-items: center;
+        height: fit-content;
+        flex-wrap: wrap;
+        .logo_empresa{
+            order: 1;
+        }
+         .sidebar_bar{
+             order: 3;
+         }
+         .sidebar_nom{
+             padding: 0;
+             margin: 0;
+             order: 2;
+             height: 100%;
+             display: flex;
+             h2{
+             font-size: 25px;
+             }
+             br {
+                 display: none;
+             }
+         }
+         .sidebar_navegacion{
+             height: 100%;
+             order: 4;
+             display: flex;
+             flex-direction: column;
+             width: 100%;
+             margin: 0;
+             padding: 5px;
+             text-align: center;
+             .sidebar_lista:hover{
+                 border-radius: 0;
+                 padding: 8px;
+             }
+         }
+         .btn_slider{
+             order: 5;
+             display: block;
+             width: 100%;
+             .sidebar_btn{
+                 text-align: center;
+                 width: 100%;
+                padding: 6px;
+                margin: 0;
+             }
+         }
+     }
+
+     .contenedor__promos{
+         min-height: 240px;
+     }
+     
+ }
+ @media screen and (max-width: 820px){
+     .calendario{
+         .nombre_dias{
+             .nom_dia p{
+                //  font-weight: 300;
+                 font-size: 13px 
+             }
+         }
+         .day p{
+             font-size: 20px;
+         }
+     }
+ }
+ 
+ @media screen and (max-width: 650px){
+    .tabla_citas {
+
+        overflow-x: scroll;
+        .tabla_header{
+          
+            .tabla_secciones > th{
+              font-size: 15px;
+           }
+        }
+        .tabla_body {
+            background-color: #ffffff;
+            .tabla_secciones > th {
+                font-size: 15px;
+            }
+        }
+        
+    }
+   
+ }
+ @media screen and (max-width: 550px){
+    .calendario{
+        .nombre_dias{
+            .nom_dia p{
+               //  font-weight: 300;
+                font-size: 10px 
+            }
+        }
+        .day p{
+            font-size: 15px;
+        }
+    }
+}
+ @media screen and(max-width: 452px){
+     .seleccion_cita{
+         .titulo_calendario h3{
+            font-size: 20px;
+         }
+         .cabecera_calendario{
+             .anterior_mes{
+                 font-size: 18px;
+             }
+             .mes_año{
+                 font-size: 20px;
+             }
+             .siguiente_mes{
+                font-size: 18px;
+             }
+         }
+     }
+    .calendario{
+        .nombre_dias{
+            .nom_dia p{
+               //  font-weight: 300;
+                font-size: 8px 
+            }
+        }
+        .day p{
+            font-size: 13px;
+        }
+    }
+    .sidebar.activado{
+       .sidebar_nom{
+           display: none;
+       }
+    }
+    .contenedor_promociones{
+
+        .title_promo h1{
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        .titulo_tabla{
+            padding: 8px;
+            text-align: center;
+        }
+        .titulo_tabla h2{
+            font-size: 25px;
+        }
+    }
+}
