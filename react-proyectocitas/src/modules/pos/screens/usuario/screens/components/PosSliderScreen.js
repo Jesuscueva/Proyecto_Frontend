@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import PosContext from "../../../../../../context/pos/posContext";
+import AuthContext from "../../../../../../context/auth/authContext"
 
 const PosSliderScreen = () => {
 
-  const {usu_nom, } = useContext(PosContext)
+  const {nombre,apellido,cerrarSesion} = useContext(AuthContext)
   const [activo, setActivo] = useState(true)
 
   const toggler = ()=>{
@@ -20,7 +20,7 @@ const PosSliderScreen = () => {
         </figure>
         <div className="sidebar_nom">
           <h2>
-            Bienvenido <br/> <strong>{usu_nom}</strong>
+            Bienvenido <br/> <strong>{nombre + "" + apellido }</strong>
           </h2>
         </div>
         <hr />
@@ -38,7 +38,7 @@ const PosSliderScreen = () => {
         </ul>
         <div className="btn_slider">
           <Link to="/pos/home" >
-          <button className="sidebar_btn">
+          <button onclick={cerrarSesion} className="sidebar_btn">
             <i class="fas fa-sign-out-alt"></i>Salir
           </button>
           </Link>

@@ -8,10 +8,13 @@ import PosState from '../../context/pos/posState';
 import FormUsuarioCita from './screens/usuario/formcitausuario/FormUsuarioCita.jsx';
 import PosPrincipalUsuarioScreens from './screens/usuario/screens/PosPrincipalUsuarioScreens';
 import Private from '../../Private';
+import AuthState from '../../context/auth/authState';
 
 
 const PosRouter = () => {
     return (
+        <AuthState>
+
         <PosState >
 
         <Switch>
@@ -24,6 +27,8 @@ const PosRouter = () => {
 
 
         </PosState>
+        </AuthState>
+
     )
 }
 

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import PosContext from './context/pos/posContext'
+import AuthContext from './context/auth/authContext'
 
 const Private = ({path, component: Component}) => {
-    const {autenticado} = useContext(PosContext) 
+    const {autenticado} = useContext(AuthContext) 
 
     return (
         <div>

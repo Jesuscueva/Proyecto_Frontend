@@ -11,6 +11,9 @@ const PosPrincipalScreen = () => {
         <>
             <PosHeader />
             <main>
+            <a href="https://api.whatsapp.com/send?phone=51970624521" class="float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            </a>
                 <PosHero />
                 <PosServicios/>
                 <PosVeterinarios />

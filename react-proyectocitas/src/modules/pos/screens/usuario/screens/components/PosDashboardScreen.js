@@ -46,15 +46,7 @@ const PosDashboardScreen = () => {
           <i class="fas fa-chevron-circle-right"></i>
         </div>
         <div className="contenedor__promos">
-            {
-                imagenes.map((imagen)=>{
-                    return ( 
-                          <figure>
-                               <img src={imagen.promo_img} alt=""/>
-                          </figure>
-                    )
-                })
-            }
+            
         </div>
         <div className="titulo_tabla">
             <h2>Proximas Citas</h2>
