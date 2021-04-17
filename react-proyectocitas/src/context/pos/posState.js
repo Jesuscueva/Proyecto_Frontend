@@ -1,11 +1,11 @@
-import React, {useReducer, useState} from 'react'
+    import React, {useReducer, useState} from 'react'
 import PosContext from './posContext'
 import PosReducer from './posResducer'
 
 
 const PosState = ({children}) => {
 
-  
+
     const [state, dispatch] = useReducer(PosReducer, {
         modal_cita: false,
         fecha_seleccionada: null,

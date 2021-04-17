@@ -4,23 +4,18 @@ import logoGoogle from "../../../../../assets/img/google-sign-icon.jpg";
 import { Link, NavLink, useHistory } from "react-router-dom";
 import { getUsuarios } from "../../../../../services/servicios";
 import PosContext from "../../../../../context/pos/posContext";
-
-const formularioVacio = {
-  email: "",
-  password: "",
-};
+import { login } from "../../../../../services/login";
+import AuthContext from "../../../../../context/auth/authContext";
 
 const LoginForm = () => {
-  const {
-    setAutenticando,
-    guardarTokenSesion,
-    setNombreUsuario,
-    setApellido,
-  } = useContext(PosContext);
+  const { sesionCorrecta } = useContext(AuthContext);
 
   const history = useHistory();
 
-  const [formulario, setFormulario] = useState({ ...formularioVacio });
+  const [formulario, setFormulario] = useState({
+    usuarioEmail: " ",
+    password: "",
+  });
 
   const handleChange = (e) => {
     setFormulario({
@@ -28,27 +23,21 @@ const LoginForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const [incorrecto, setIncorrecto] = useState(true);
 
   const submit = (e) => {
     e.preventDefault();
-
     //Consumir servicio
-
-    getUsuarios().then((data) => {
-      data.map((user) => {
-        if (
-          user.email === formulario.email &&
-          user.password === formulario.password
-        ) {
-          console.log("Usuario verificado");
-          setFormulario(formularioVacio);
-          setAutenticando(true);
-          guardarTokenSesion(user.token);
-          setNombreUsuario(user.name);
-          setApellido(user.lastname);
-          history.push("/pos/usuario");
-        }
-      });
+    login(formulario).then((data) => {
+      console.log(data);
+      console.log("DATA DEL LOGINNNNN---------------");
+      if (data.access) {
+            console.log("correcto");
+            sesionCorrecta(data.access);
+            history.push('/pos/usuario')
+      } else {
+          alert("correo o contraseña Incorrecto");
+      }
     });
   };
 
@@ -74,8 +63,8 @@ const LoginForm = () => {
           <p className="form__text">o ingresa con tus datos de sesión</p>
 
           <input
-            name="email"
-            value={formulario.email}
+            name="usuarioEmail"
+            value={formulario.usuarioEmail}
             onChange={handleChange}
             required
             type="email"
@@ -91,11 +80,9 @@ const LoginForm = () => {
             className="form__input"
             placeholder="Contraseña"
           />
-
           <button type="submit" className="boton_formulario">
-            Iniciar sesión
+                Iniciar sesión
           </button>
-
           <div className="form__links">
             <div className="links__top">
               <p>¿Aún no tienes una cuenta? </p>
