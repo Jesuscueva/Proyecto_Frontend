@@ -1,4 +1,4 @@
-const URL_BACK = "http://127.0.0.1:8000"
+const URL_BACK = "https://app-citas-grupo5.herokuapp.com"
 
 export const login = async (objlogin) => {
     const peticion = await fetch(`${URL_BACK}/login_custom`, {

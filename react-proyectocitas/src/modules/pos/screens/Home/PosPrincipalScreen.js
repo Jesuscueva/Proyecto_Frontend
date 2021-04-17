@@ -14,7 +14,7 @@ const PosPrincipalScreen = () => {
                 <PosHero />
                 <PosServicios/>
                 <PosVeterinarios />
-                <PosTestimonios />
+               {/*<PosTestimonios />*/ } 
                 <PosFooter />
             </main>
         </>

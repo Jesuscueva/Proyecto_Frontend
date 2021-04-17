@@ -1,31 +1,45 @@
 import { URL_BACKEND2 } from "../environments/environments"
-const URL_BACKEND = "https://600c6acbf979dd001745bf5b.mockapi.io"
-const URL_BACKEND3 = "https://6018d613971d850017a404d4.mockapi.io/";
+const URL_BACKEND = "https://app-citas-grupo5.herokuapp.com"
 
+//********** SERVICIOS ************//
 
+//GET VETERINARIO 
+export const getVeterinarios = async () =>{
+    const peticion = await fetch(`${URL_BACKEND}/veterinario`)
+    const data = await peticion.json()
+    return data
+}
 
-//SERVICIO PARA EL CLIENTE 
-
-//SERVICIO JESUS
+//GET SERVICIO
 export const getServicios = async () =>{
-    const peticion = await fetch(`${URL_BACKEND}/servicios_veterinario`)
+    const peticion = await fetch(`${URL_BACKEND}/servicio`)
     const data = await peticion.json()
     return data
 }
 
-export const getHoras = async () =>{
-    const peticion = await fetch(`${URL_BACKEND}/horaspor_seleccionar`)
+//GET VETERINARIA
+export const getVeterinaria = async () =>{
+    const peticion = await fetch(`${URL_BACKEND}/veterinaria`)
     const data = await peticion.json()
     return data
 }
 
-export const getCitasRegistradas = async ()=>{
-    const peticion = await fetch(`${URL_BACKEND2}/citas`)
+//GET MASCOTA USUARIO
+export const getMascotaUsuario = async (id) =>{
+    const peticion = await fetch(`${URL_BACKEND}/traerMascotadelUsuario/${id}`);
     const data = await peticion.json()
     return data
 }
 
-export  const posCitasRegistradas = async (objCita) => {
+//GET CITA
+export const getCita = async () =>{
+    const peticion = await fetch(`${URL_BACKEND}/traerCita`)
+    const data = await peticion.json()
+    return data
+}
+
+//POST CITA
+export  const posCita = async (objCita) => {
     const peticion = await fetch(`${URL_BACKEND2}/citas`, {
         method: "POST",
         body: JSON.stringify(objCita),
@@ -36,6 +50,29 @@ export  const posCitasRegistradas = async (objCita) => {
     const data = await peticion.json()
     return data
 }
+
+
+export const getVeterinaria = async () =>{
+    const peticion = await fetch(`${URL_BACKEND}/veterinaria`)
+    const data = await peticion.json()
+    return data
+}
+
+
+
+export const getHoras = async () =>{
+    const peticion = await fetch(`${URL_BACKEND}/horaspor_seleccionar`)
+    const data = await peticion.json()
+    return data
+}
+
+export const getCitasRegistradas = async ()=>{
+    const peticion = await fetch(`${URL_BACKEND2}/cita`)
+    const data = await peticion.json()
+    return data
+}
+
+
 
 //SERVICIO DE DIEGO
 
